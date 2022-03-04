@@ -3,7 +3,7 @@
 	// Data Fetch
 	$email = $_POST['email'];
 
-	$select_sql = "SELECT * FROM Register WHERE Email='$email'";
+	$select_sql = "SELECT * FROM register WHERE Email='$email'";
 	// $select_sql;
 
 	$result = $conn->query($select_sql);
@@ -31,18 +31,18 @@
 		    $mail->Host = 'smtp.gmail.com';
 		    $mail->Port = 587;
 		    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-		    $mail->Username = 'jigarpatel.devloper@gmail.com';                 // SMTP username
-		    $mail->Password = 'admin@1a';                           // SMTP password
+		    $mail->Username = 'enter your email';                 // SMTP username
+		    $mail->Password = 'enter your password';                           // SMTP password
 		    
-		    $mail->setFrom('jigarpatel.devloper@gmail.com', 'PG2ME');
+		    $mail->setFrom('itleela95@gmail.com', 'PG2ME');
 		    $mail->addAddress($Email, $Name);     // Add a recipient
 
 		       // $mail->addReplyTo('info@example.com', 'Information');
    			$mail->isHTML(true);                                  // Set email format to HTML
    			$mail->Subject = 'Password of PG4ME';
    			// Mail Body
-   			$mail->Body .= '<h3 style="color:black;">Your Email Is '.$Email.'.</h3>';
-   			$mail->Body .= '<h3 style="color:black;">Your Password Is '.$Pwd.'.</h3>';
+   			$mail->Body .= '<h3 style="color:black;">Your Email Is :-'.$Email.'.</h3>';
+   			$mail->Body .= '<h3 style="color:black;">Your Password Is :-'.$Pwd.'.</h3>';
 
 
     		if ($mail->send()) {			

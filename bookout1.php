@@ -5,7 +5,10 @@
 	// Get Resource id
 	$id = $_GET['res_id'];
 	
-	
+
+if (!isset($_SESSION["email"])) {
+  header("location:login.php");
+}
 
 //Query 
     $Select_bookdetails_sql = "SELECT * FROM resources where  id = '$id'";

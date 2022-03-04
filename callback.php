@@ -1,5 +1,11 @@
 <?php 
 session_start();
+
+session_start();
+if (!isset($_SESSION["email"])) {
+  header("location:login.php");
+}
+
   include('config.php');
  $cust_id=$_SESSION["email"];
  $order_id=strtotime("now");
@@ -50,8 +56,8 @@ session_start();
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = '';                 // SMTP username
-    $mail->Password = '';                           // SMTP password
+    $mail->Username = 'itleela95@gmail.com';                 // SMTP username
+    $mail->Password = 'leela21597';                           // SMTP password
     
     //$mail->setFrom('26it2017@gmail.com', 'Jigar Patel');
     

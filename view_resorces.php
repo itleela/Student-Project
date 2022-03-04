@@ -2,6 +2,8 @@
     require 'config.php';
     session_start();
     // Queries
+
+
 	
 	
 	$type = $_GET['type'];
